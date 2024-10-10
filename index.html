@@ -1,9 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Kalkulator Konversi Suhu</title>
+    <link rel="stylesheet" href="css\style.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Kalkulator Konversi Suhu</h1>
+      </header>
+
+      <section>
+        <form id="form-konversi">
+          <fieldset>
+            <legend>Konversikan Suhu</legend>
+
+            <div class="input-section">
+              <label for="suhu">Masukkan Suhu:</label>
+              <input type="number" id="suhu" placeholder="Suhu" />
+            </div>
+
+            <div class="input-section">
+              <label for="dari-satuan">Dari:</label>
+              <select id="dari-satuan">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+                <option value="R">Reamur</option>
+              </select>
+            </div>
+
+            <div class="input-section">
+              <label for="ke-satuan">Ke:</label>
+              <select id="ke-satuan">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+                <option value="K">Kelvin</option>
+                <option value="R">Reamur</option>
+              </select>
+            </div>
+
+            <button type="button" onclick="konversiSuhu()">Konversi</button>
+            <button type="reset" onclick="resetHasil()">Reset</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section>
+        <article
+          class="hasil"
+          id="hasil"
+          role="status"
+          aria-live="polite"
+        ></article>
+        <article class="penjelasan" id="penjelasan" role="document"></article>
+      </section>
+
+      <footer>
+        <p>@BroRik</p>
+      </footer>
+    </main>
+
+    <script src="js\script.js"></script>
+  </body>
 </html>
